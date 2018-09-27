@@ -1,0 +1,348 @@
+    /*body reset*/
+    
+    body {
+        margin: 0;
+        font-family: 'Cairo', 'Open Sans', sans-serif;
+        height: 1500px;
+        /*ارتفاع مؤقت للتجربة*/
+    }
+    /*start header*/
+    
+    #header {
+        width: 100%;
+        /*عرض 100 % من الشاشة */
+        min-height: 50px;
+        /*إقل إرتفاع نريدة هو 50 بيكسل*/
+        background: #fff;
+        /*لون خلفية بيضاء*/
+        box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+        /*عمل ظل للعنصر*/
+        position: fixed;
+        /*موقعة ثابت*/
+        top: 0;
+        /*ملتصق بالاعلى*/
+    }
+    
+    .container {
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 0px 15px;
+        /*هنا نعطية الهوامش من اليسار واليمين بقيمة 15*/
+        box-sizing: border-box;
+        /*هنا نحتسب هذه الهوامش من حال العرض الحالي*/
+        overflow: auto;
+        /*جعل العنصر يلتف حول إي عناصر تخرج عن حدودة*/
+    }
+    
+    #logo {
+        float: right;
+    }
+    
+    #logo a {
+        display: block;
+        padding: 12px 15px 0px;
+    }
+    
+    #navbar {
+        float: left;
+    }
+    
+    #navbar ul {
+        list-style-type: none;
+        /*ازالة النقاط*/
+        margin: 0;
+        /*ازالة الهوامش الخارجية*/
+        padding: 0;
+        /*ازالة الهوامش الداخلية*/
+        overflow: hidden;
+        /*اخفاء العناصر التي قد تخرج عن القائمة*/
+    }
+    
+    #navbar li {
+        float: right;
+    }
+    
+    #navbar li a {
+        display: inline-block;
+        padding: 17px 15px;
+        font-size: 14px;
+        color: #333;
+        text-decoration: none;
+        border-bottom: 2px solid #fff;
+        transition: all 0.3s;
+        /*هنا أضفته*/
+    }
+    
+    #navbar .dropdown-content {
+        display: none;
+        /*اضفت هذا فقط*/
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 230px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+        /* z-index: 1; */
+    }
+    
+    #navbar .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    #navbar .dropdown-content li {
+        float: none;
+    }
+    
+    #navbar .dropdown-content a {
+        display: block;
+        padding: 6px 15px;
+        text-align: right;
+        border-bottom: 2px solid #fff;
+    }
+    
+    #navbar li a:hover {
+        border-bottom: 2px solid #02b3e4;
+        color: #00aaf6;
+    }
+    
+    #navbar .dropdown-content a:hover,
+    #navbar li a:hover {
+        border-bottom: 2px solid #02b3e4;
+        color: #00aaf6;
+        background: #fff;
+    }
+    /* banner  */
+    
+    .banner {
+        width: 100%;
+        height: 500px;
+        background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../images/banner.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+    }
+    
+    .banner h1 {
+        color: #fff;
+        font-size: 42px;
+        margin: 165px auto 5px;
+    }
+    
+    .banner h3 {
+        color: #fff;
+        font-size: 18px;
+        margin-top: 0px;
+    }
+    
+    .banner .join-us {
+        display: inline-block;
+        color: #fff;
+        font-size: 25px;
+        background: #11b7e6;
+        border: 1px solid #122b40;
+        text-decoration: none;
+        padding: 5px 30px;
+        border-radius: 4px;
+        margin-top: 10px;
+        transition: all 0.3s;
+        /*هنا تم إضافتة*/
+    }
+    
+    .banner .join-us:hover {
+        background: #029fcb;
+    }
+    
+    .banner .join-us:active {
+        background: #204d74;
+    }
+    /*-start section--*/
+    
+    .section {
+        padding: 40px 0;
+        text-align: center;
+    }
+    
+    .section h2 {
+        font-size: 35px;
+        color: #333;
+    }
+    
+    .underline::after {
+        content: "";
+        display: block;
+        width: 100px;
+        height: 2px;
+        background-color: #11b7e6;
+        margin: 4px auto 40px;
+    }
+    
+    .section p {
+        max-width: 720px;
+        margin: 30px auto;
+    }
+    /* info  */
+    
+    .info-list ul {
+        text-align: right;
+        /*محاذاة النص لليمين*/
+        list-style-type: circle;
+        /*تغيير نوع النقاط*/
+    }
+    
+    .info-list ul li {
+        margin-bottom: 18px;
+        font-size: 14px;
+        color: #333;
+    }
+    
+    .info-list li a {
+        text-decoration: none;
+        color: #00aaf6;
+    }
+    
+    .track {
+        width: 100%;
+        background: url(../images/track.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 70px 0;
+    }
+    
+    .track .track-desc {
+        /* width: 40%; */
+        flex: 1;
+        text-align: right;
+        padding: 0 15px;
+        /* background: #fff;
+        margin-left: 20px; */
+        /* height: 200px;
+    margin: 20px;
+    float: left; */
+    }
+    
+    .track .container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .track iframe {
+        width: 100%;
+        height: 360px;
+        border: none;
+    }
+    
+    .track-desc h3,
+    .track-desc h2,
+    .track-desc p {
+        color: #fff;
+        margin: 0px;
+    }
+    
+    .track-desc .underline::after {
+        margin: 15px 0px 30px;
+    }
+    
+    .track-desc h3 {
+        color: #11b7e6;
+        font-size: 40px;
+    }
+    
+    .track-desc h2 {
+        line-height: 42px;
+    }
+    
+    .track-desc p {
+        font-size: 15px;
+    }
+    
+    .section>div:nth-of-type(even) {
+        background: #fff;
+    }
+    
+    .section>div:nth-of-type(even) h2,
+    .section>div:nth-of-type(even) p {
+        color: #333;
+    }
+    
+    .section>div:nth-of-type(even) .container {
+        flex-direction: row;
+    }
+    
+    @media(min-width:769px) {
+        .track .container {
+            display: flex;
+            flex-direction: column;
+        }
+        .section>div:nth-of-type(even) .container {
+            flex-direction: column;
+        }
+    }
+    
+    .faq h2 {
+        margin-top: 0;
+        font-size: 25px;
+    }
+    
+    .faq .container {
+        text-align: right;
+    }
+    
+    .accordion {
+        width: 100%;
+    }
+    
+    .accordion label {
+        display: block;
+        padding: 10px 30px;
+        background-color: #fafafa;
+        border: 1px solid #eee;
+        font-size: 14px;
+        color: #333;
+        cursor: pointer;
+        /*اضفت هذه الخاصية*/
+    }
+    
+    .accordion .accordion-content {
+        border: 1px solid #eee;
+        border-top: none;
+        overflow: hidden;
+        display: none;
+        /*مخفي*/
+    }
+    
+    .accordion p {
+        margin: 15px;
+        font-size: 14px;
+        color: #333;
+    }
+    
+    .accordion input[type=checkbox] {
+        position: absolute;
+        display: none;
+        /*هنا تم إخفائة*/
+    }
+    
+    .accordion {
+        width: 100%;
+        position: relative;
+    }
+    
+    .accordion input[type=checkbox]:checked~.accordion-content {
+        display: block;
+    }
+    
+    .accordion label::after {
+        content: "+";
+        position: absolute;
+        top: 9px;
+        /*هنا قمت بالتغيير*/
+        right: 15px;
+        /*هنا قمت بالتغيير*/
+        display: block;
+        width: 10px;
+        height: 10px;
+    }
+    
+    .accordion input[type=checkbox]:checked~label::after {
+        content: "-";
+    }
